@@ -1,5 +1,6 @@
 package com.xworkz.generics.runner;
 
+import com.xworkz.generics.comparator.FromAddressComparator;
 import com.xworkz.generics.customtype.Gmail;
 
 import java.util.Collections;
@@ -18,8 +19,22 @@ public class GmailRunner {
         Collections.sort(linkedList);
         System.out.println("===============================================");
 
-        for (Object o : linkedList){
+        for (Object o : linkedList) {
             System.out.println(o);
+        }
+
+        System.out.println("===============================================");
+
+        Collections.sort(linkedList, new FromAddressComparator());
+        for (Object o1 : linkedList) {
+            System.out.println(o1);
+        }
+
+        System.out.println("===============================================");
+
+        Collections.sort(linkedList, new FromAddressComparator());
+        for (Object o2 : linkedList) {
+            System.out.println(o2);
         }
     }
 }

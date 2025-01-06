@@ -1,5 +1,7 @@
 package com.xworkz.generics.runner;
 
+import com.xworkz.generics.comparator.ApplicationDeveloperComparator;
+import com.xworkz.generics.comparator.ApplicationVersionComparator;
 import com.xworkz.generics.customtype.Application;
 import com.xworkz.generics.customtype.MusicPlayer;
 
@@ -21,5 +23,17 @@ public class ApplicationRunner {
 
         for (Object o : apps)
             System.out.println(o);
+
+        System.out.println("========================");
+
+        Collections.sort(apps, new ApplicationVersionComparator());
+        for (Object o1 : apps)
+            System.out.println(o1);
+
+        System.out.println("========================");
+
+        Collections.sort(apps, new ApplicationDeveloperComparator());
+        for (Object o2 : apps)
+            System.out.println(o2);
     }
 }

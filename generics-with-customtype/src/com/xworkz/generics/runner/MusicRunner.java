@@ -1,5 +1,7 @@
 package com.xworkz.generics.runner;
 
+import com.xworkz.generics.comparator.MusicPlayerSingerComparater;
+import com.xworkz.generics.comparator.MusicPlayerTitleComparator;
 import com.xworkz.generics.customtype.MusicPlayer;
 
 import java.util.Collections;
@@ -19,5 +21,17 @@ public class MusicRunner {
 
         for (Object o : musicPlayers)
             System.out.println(o);
+
+        Collections.sort(musicPlayers, new MusicPlayerTitleComparator());
+        System.out.println("============================");
+
+        for (Object o1 : musicPlayers)
+            System.out.println(o1);
+
+        Collections.sort(musicPlayers, new MusicPlayerSingerComparater());
+        System.out.println("============================");
+
+        for (Object o2 : musicPlayers)
+            System.out.println(o2);
     }
 }

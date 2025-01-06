@@ -1,11 +1,14 @@
 package com.xworkz.generics.runner;
 
+import com.xworkz.generics.comparator.CalenderIdComparator;
+import com.xworkz.generics.comparator.calenderDescriptionComparator;
 import com.xworkz.generics.customtype.Calendar;
 import com.xworkz.generics.customtype.Gmail;
 import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 public class CalendarRunner {
@@ -28,5 +31,15 @@ public class CalendarRunner {
             System.out.println(obj);
         }
 
+        Collections.sort(linkedList, new CalenderIdComparator());
+
+        System.out.println("============================================================");
+        for (Object obj1 : linkedList)
+            System.out.println(obj1);
+
+        Collections.sort(linkedList, new calenderDescriptionComparator());
+        System.out.println("============================================================");
+        for (Object obj2 : linkedList)
+            System.out.println(obj2);
     }
 }
