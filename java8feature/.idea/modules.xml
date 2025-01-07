@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/generics-with-customtype.iml" filepath="$PROJECT_DIR$/generics-with-customtype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java8feature.iml" filepath="$PROJECT_DIR$/java8feature.iml" />
     </modules>
   </component>
 </project>
